@@ -32,4 +32,5 @@ int main() {
         }
     }
     cout << "You WIN!" << endl;
+    return 0;
 }

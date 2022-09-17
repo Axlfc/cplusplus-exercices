@@ -23,4 +23,5 @@ int main() {
     cout << "Introduce el nombre de usuario:\n";
     cin >> usuario;
     cout << "La contraseña generada es:\t" << generatePassword(usuario) << "\n";
+    return 0;
 }

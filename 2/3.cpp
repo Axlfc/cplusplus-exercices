@@ -76,4 +76,5 @@ int main() {
             cout << op << "=" << split(a, b) << "\n";
         }
     }
+    return 0;
 }

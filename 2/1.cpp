@@ -19,4 +19,5 @@ int main() {
     cout << "Introduce la cadena:\t";
     cin >> cadena;
     cout << "El número de a's de la cadena:\t" << strlen(cadena);
+    return 0;
 }
