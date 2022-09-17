@@ -29,7 +29,7 @@ double split(double x, double y) {
 int getFirstValue(string operation, int position) {
     string str;
     for (int x = 0; x < position; x++) {
-                str += operation[x];
+        str += operation[x];
     }
     return stoi(str);
 }
@@ -49,7 +49,7 @@ int main() {
     double b;
     string op;
 
-    std::cout << "Introduce operación:\t";
+    std::cout << "Introduzca operación:\t";
     std::getline(std::cin, op);
     // Remove all whitespace characters
     op.erase(std::remove_if(op.begin(), op.end(), ::isspace), op.end());
@@ -58,22 +58,22 @@ int main() {
         if (op[i] == '+') {
             a = getFirstValue(op, i);
             b = getSecondValue(op, i);
-            cout << "\nEl resultado es:\t" << sum(a, b) << "\n";
+            cout << op << "=" << sum(a, b) << "\n";
         }
         else if (op[i] == '-') {
             a = getFirstValue(op, i);
             b = getSecondValue(op, i);
-            cout << "\nEl resultado es:\t" << sub(a, b) << "\n";
+            cout << op << "=" << sub(a, b) << "\n";
         }
         else if (op[i] == '*' || op[i] == 'x') {
             a = getFirstValue(op, i);
             b = getSecondValue(op, i);
-            cout << "\nEl resultado es:\t" << mult(a, b) << "\n";
+            cout << op << "=" << mult(a, b) << "\n";
         }
         else if (op[i] == '/') {
             a = getFirstValue(op, i);
             b = getSecondValue(op, i);
-            cout << "\nEl resultado es:\t" << split(a, b) << "\n";
+            cout << op << "=" << split(a, b) << "\n";
         }
     }
 }
