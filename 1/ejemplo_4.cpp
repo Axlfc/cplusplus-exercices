@@ -9,7 +9,7 @@ int main() {
     int y;
     cout << "Type 2nd number: "; // Type a number and press enter
     cin >> y; // Get user input from the keyboard
-    while (x > 0) {
+    while (x - y > 0) {
         x = x - y;
         cout << "The result is: " << x << "\n"; // Type a number and press enter
     }
