@@ -11,8 +11,25 @@ programa debe mostrar todo en una misma oración.*/
 
 
 int main() {
+    int a;
+    char s;
+    string m;
+    char magnitude;
+
+    cout << "\nType age:\n\n"; // Type a number and press enter
+    cin >> a;
+    cout << "\nType sex (m/f):\n\n"; // Type a number and press enter
+    cin >> s;
+    cout << "\nType height:\n\n"; // Type a number and press enter
+    cin >> m;
+    // Only meters are interpeted, submagnitudes are cm are not contemplated. 
+    for (int i = 0; i < m.size(); ++i) {
+        if (m[i] == 'm') {
+            magnitude = m[i];
+        }
+    }
+    m.erase(remove(m.begin(), m.end(), magnitude), m.end());
+
     
-    cout << "\n(Type noseke:\n\n"; // Type a number and press enter
-    cin >> x;
-    cout << "\nNota final:\t" << notaFinal(total, c) << "\n";
+    cout << "\nData:\tage=" << a << "\tsex=" << s << "\theight=" << m << magnitude << "\n";
 }
