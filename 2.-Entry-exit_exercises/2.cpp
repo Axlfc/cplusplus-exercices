@@ -15,6 +15,7 @@ int main() {
     char s;
     string m;
     char magnitude;
+    float realM;
 
     cout << "\nType age:\n\n"; // Type a number and press enter
     cin >> a;
@@ -29,7 +30,8 @@ int main() {
         }
     }
     m.erase(remove(m.begin(), m.end(), magnitude), m.end());
+    realM = atof(m.c_str());
 
     
-    cout << "\nData:\tage=" << a << "\tsex=" << s << "\theight=" << m << magnitude << "\n";
+    cout << "\nData:\tage=" << a << "\tsex=" << s << "\theight=" << realM << magnitude << "\n";
 }
