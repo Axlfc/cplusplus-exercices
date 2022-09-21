@@ -23,11 +23,16 @@ int main() {
     cin >> s;
     cout << "\nType height:\n\n"; // Type a number and press enter
     cin >> m;
-    // Only meters are interpeted, submagnitudes are cm are not contemplated. 
+    // Only meters are interpeted, submagnitudes like cm are not contemplated. 
     for (int i = 0; i < m.size(); ++i) {
         if (m[i] == 'm') {
             magnitude = m[i];
         }
+
+        if (m[i] == ',') {
+            m[i] = '.';
+        }
+
     }
     m.erase(remove(m.begin(), m.end(), magnitude), m.end());
     realM = atof(m.c_str());
