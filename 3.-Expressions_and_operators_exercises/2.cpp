@@ -14,20 +14,27 @@ float notaFinal(float total, float n){
 
 int main() {
     bool final = false;
-    float total;
+    float total = 0;
     string x;
-    int c = 0;
+    float y = 0;
+    int c = -1;
     while ( !final ) {
-        cout << "\nType qualifiaction:\n(Type 'FIN' to enter)\n\n"; // Type a number and press enter
+        cout << "\n(Type 'FIN' to display result)\nType qualifiaction:\n\n"; // Type a number and press enter
         cin >> x;
         if ( x == "FIN" ) {
             final = true;
         }
-        else {
+
+        // Convert string to float
+        y = atof(x.c_str());
+        if (y <= 10) {
+            total += y;
             c++;
         }
-        total += stoi(x);
+        else {
+            cout << "Enter qualifiaction value lower than 10!\n";
+            return 1;
+        }
     }
-    cout << "Número de notas introducidas:\t" << c;
-    cout << "\nNota final:\t" << notaFinal(total, c);
+    cout << "\nNota final:\t" << notaFinal(total, c) << "\n";
 }
