@@ -14,7 +14,6 @@ bool isPair(int n) {
     else {
         return false;
     }
-    
 }
 
 int main() {
@@ -27,5 +26,4 @@ int main() {
     else {
         cout << "\nNumber " << x << " is odd.\n";
     }
-    
 }
