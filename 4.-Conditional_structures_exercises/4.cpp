@@ -7,21 +7,21 @@ using namespace std;
  /*4.   Hacer un programa que simule un cajero automático, con saldo inicial de 1000 €. El
 usuario podrá introducir saldo, sacar dinero o consultar el saldo de la cuenta..*/
 
-int intro(int n, int x) {
+float intro(float n, float x) {
     return n + x;
 }
 
-int take(int n, int x) {
+float take(float n, float x) {
     return n - x;
 }
 
-int consult(int n) {
+float consult(float n) {
     return n;
 }
 
 int main() {
     bool isClientOperating = true;
-    int balance = 1000;
+    float balance = 1000;
     string op;
     int amount;
     cout << "a)\tIntroduce\n";

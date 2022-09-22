@@ -41,7 +41,6 @@ int main() {
         if (!isdigit(tax[i])) {
             if (tax[i] == '%') {
                 isPercentage = true;
-                cout << "A PERCENTAGE!!\n";
             }
         }
     }
