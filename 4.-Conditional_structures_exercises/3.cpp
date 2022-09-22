@@ -13,8 +13,9 @@ int main() {
     int c = 0;
     string text;
     int mayusNum = 0;
-    cout << "\n(Type text:\n\n"; // Type a number and press enter
-    cin >> text;
+    cout << "\nType text:\n\n"; // Type a text and press enter
+    getline(cin, text);
+    remove(text.begin(), text.end(), ' ');
     int length = text.size();
 
     for (int i = 0; i < length; ++i) {
@@ -22,6 +23,6 @@ int main() {
             c++;
         }
     }
-    cout << "\nNumber of capital letters" << c << "\n";
-    cout << "\nNumber of lower case letters" << length - c << "\n";
+    cout << "\nNumber of capital letters:\t" << c << "\n";
+    cout << "\nNumber of lower case letters:\t" << length - c << "\n";
 }
