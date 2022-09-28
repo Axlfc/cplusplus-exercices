@@ -10,8 +10,16 @@ supera los 10 caracteres mostrarla en pantalla, en caso contrario mostrar error.
 
 
 int main() {
-    
-    cout << "\n(Type noseke:\n\n"; // Type a number and press enter
-    cin >> x;
+    string x;
+    cout << "\nType string:\n"; // Type a string and press enter
+    getline(cin, x);
+    if (x.size() >= 10) {
+        cout << x << "\n";
+        return 0;
+    }
+    else {
+        cout << "ERROR\n";
+        return 1;
+    }
        
 }

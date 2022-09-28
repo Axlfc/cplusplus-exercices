@@ -1,6 +1,9 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <cstring>
+#include <cctype>
+
 
 using namespace std;
 
@@ -11,8 +14,18 @@ usuario)”.*/
 
 
 int main() {
-    
-    cout << "\n(Type noseke:\n\n"; // Type a number and press enter
-    cin >> x;
-       
+    string n;
+    bool allCaps = false;
+    cout << "\nType name with capital letter:\n"; // Type a name and press enter
+    getline(cin, n);
+
+    if (n[0] == 'E') {
+        for (int i = 0; i < n.size(); ++i) {
+            n[i] = tolower(n[i]);
+        }
+        cout << n << "\n";
+    }
+    else {
+            cout << "Hola " << n << "\n";
+        }       
 }
