@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <string>
 #include <vector>
+
 using namespace std;
 
  /*1.   Escribir un programa que defina un vector de números y calcule: la suma y la
