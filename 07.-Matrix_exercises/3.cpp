@@ -120,6 +120,5 @@ int main() {
         cout << " ";
     }
 
-    cout << "XD\n";
     return 0;
 }
