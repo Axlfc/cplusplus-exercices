@@ -10,8 +10,22 @@ columnas. Posteriormente, mostrar la matriz en pantalla.*/
 
 
 int main() {
-    
-    cout << "\n(Type noseke:\n\n"; // Type a number and press enter
-    cin >> x;
-       
+    int row;
+    cout << "\nType number of rows:\n"; // Type a number and press enter
+    cin >> row;
+
+    int column;
+    cout << "\nType number of columns:\n"; // Type a number and press enter
+    cin >> column;
+
+    int m[row][column] = {};
+
+    cout << "\n" << row << "x" << column << " Matrix:\n";
+    for (int i = 0; i < row; i++) {
+        cout << endl;
+        for (int j = 0; j < column; j++) {
+            cout << m[i][j] << " ";
+        }
+    }
+    cout << "\n";
 }
