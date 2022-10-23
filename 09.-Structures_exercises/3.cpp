@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-#include <string>
+#include <string.h>
 
 using namespace std;
 
@@ -11,10 +11,58 @@ de personas rellene dos nuevos vectores: uno que conecta las personas que no est
 activo y otro las que sí.*/
 
 
+void clean_stdin(void)
+{
+    int c;
+    do {
+        c = getchar();
+    } while (c != '\n' && c != EOF);
+}
+
+
+struct Persona_works{
+	char name[30];
+	bool works;
+}p[30],pw[30],pww[30];
+
+
+
 
 int main() {
-    
-    cout << "\n(Type noseke:\n\n"; // Type a number and press enter
-    cin >> x;
-       
+    int nPeople, j=0, k=0;
+
+	cout << "Enter number of people: ";
+	cin >> nPeople;
+
+	for(int i = 0; i < nPeople; i++){
+		// Emptying the buffer
+		clean_stdin();
+
+		cout << "Name: ";
+		cin.getline(p[i].name,30,'\n');
+
+		cout << "Works (1/0)?:";
+		cin >> p[i].works;
+
+		if(p[i].works == 1){
+            strcpy(pw[j].name,p[i].name);
+            j++;
+		}
+		else{
+			strcpy(pww[k].name,p[i].name);
+			k++;
+		}
+		cout << "\n";
+	}
+
+	cout << "\nPeople with works\n";
+	for(int i = 0; i < nPeople; i++) {
+		cout << pw[i].name << "\n";
+	}
+
+	cout << "\nPeople without works\n";
+	for(int i = 0; i < nPeople; i++) {
+		cout << pww[i].name << "\n";
+	}
+	return 0;
 }
