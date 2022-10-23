@@ -26,8 +26,6 @@ struct Persona_works{
 }p[30],pw[30],pww[30];
 
 
-
-
 int main() {
     int nPeople, j=0, k=0;
 
