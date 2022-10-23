@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <string>
+#include <stack>
 
 using namespace std;
 
@@ -8,10 +9,27 @@ using namespace std;
 decida, después, mostrar todos los números introducidos en la pila.*/
 
 
-
 int main() {
-    
-    cout << "\n(Type noseke:\n\n"; // Type a number and press enter
-    cin >> x;
-       
+    stack<int> newstack;
+    bool isUserDone = false;
+    string x = "0";
+    int y = 0;
+    while (!isUserDone) {
+        cout << "\n(Type a number to add to stack:\n\n"; // Type a number and press enter
+        cin >> x;
+        try {
+            y = stoi(x);
+            newstack.push(y);
+        }
+        catch (invalid_argument &e) {
+            isUserDone = true;
+        }
+    };
+    // Print stack result
+    while (!newstack.empty()) {
+        cout <<  newstack.top() << " ";
+        newstack.pop();
+    }
+    cout << "\n";
+    return 0;
 }
